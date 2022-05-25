@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.about {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #333645;
+    color: white !important;
+    @media screen and (min-width: 990px) {
+        background-image: url(../images/branded.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: auto 100%;
+    }
+    @media screen and (min-width: 1260px) {
+        justify-content: left;
+    }
+  }
+  
+.about-content {
+    max-width: 880px;
+    padding: 50px 30px;
+    @media screen and (min-width: 1260px) {
+        width: 50%;
+    }
+}
+
+.about-content h1 {
+    margin-top: -6px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.about-content p {
+    line-height: 1.875rem;
+    margin-bottom: 20px;
+}
+
+.about-content .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 180px;
+    height: 47px;
+    border-radius: 3px;
+    line-height: 47px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: $darker-slate-grey;
+    padding: 5px 15px;
+}
+
+.about-content .btn span.icon-arrow-right2 {
+    margin-left: 5px;
+}

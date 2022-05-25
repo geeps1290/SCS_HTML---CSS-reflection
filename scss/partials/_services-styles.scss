@@ -1,0 +1,279 @@
+@use '../abstracts' as *;
+
+.services-container {
+    height: auto;
+    padding: 30px 0 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    background: #FEFEFE;
+    text-decoration: none;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+    @media screen and (min-width: 990px) {
+        padding: 30px;
+        column-gap: 20px;
+    }
+}
+
+.card {
+    color: #333645;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    // display: block;
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+    text-decoration: none;
+    text-align: center;
+    width: 90%;
+    max-width: 658px;
+    height: 315px;
+}
+
+.first-row {
+    @media screen and (min-width: 990px) {
+        width: 30%;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 366px;
+    }
+}
+
+.second-row {
+    @media screen and (min-width: 990px) {
+        width: 45%;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 270px;
+    }
+}
+
+.services-container .card h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 17px;
+    margin: 0 0 11px;
+}
+
+.services-container .card p {
+    font-size: .8rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+}
+
+a.card span.icon {
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto 17px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.438rem;
+    line-height: 58px;
+}
+
+// a.card
+
+.services-container .card h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 28px;
+    height: 3px;
+    display: block;
+    background-color: #333645;
+}
+
+/* ==== Individual card colour effects ==== */
+
+/* Software card */ 
+a.card span.icon-software {
+    background-color: $light-blue-grey;
+}
+
+a.card .btn-software {
+    background-color: $light-blue-grey;
+}
+
+
+/* IT card */ 
+a.card span.icon-it {
+    background-color: $light-blue;
+}
+
+a.card .btn-it {
+    background-color: $light-blue;
+}
+
+/* Marketing card */ 
+a.card span.icon-marketing {
+    background-color: $bright-green;
+}
+
+a.card .btn-marketing {
+    background-color: $bright-green;
+}
+
+
+/* Telecoms card */ 
+a.card span.icon-telecoms {
+    background-color: $red;
+}
+
+a.card .btn-telecoms {
+    background-color: $red;
+}
+
+/* Web card */ 
+a.card span.icon-web {
+    background-color: $dusky-purple;
+}
+
+a.card .btn-web {
+    background-color: $dusky-purple;
+}
+
+/* Security card */ 
+a.card span.icon-cyber {
+    background-color: $dusky-red;
+}
+
+a.card .btn-security {
+    background-color: $dusky-red;
+}
+
+/* Training card */ 
+a.card span.icon-training {
+    background-color: $dusky-purple;
+}
+
+a.card .btn-training {
+    background-color: $dusky-purple;
+}
+
+
+/* ==== Individual card hover effects ==== */
+
+.software-card:hover {
+    background-color: $light-blue-grey;
+    color: #fff;
+
+    .btn-software {
+        background-color: #fff;
+        color: $light-blue-grey;
+    }
+
+    .icon-software {
+        background-color: #fff;
+        color: $light-blue-grey;
+    }
+
+    h2::after {
+        background: #fff;
+    }
+}
+
+.it-card:hover {
+    background-color: $light-blue;
+    color: #fff;
+    .btn-it {
+        background-color: #fff;
+        color: $light-blue;
+    }
+    .icon-it {
+        background-color: #fff;
+        color: $light-blue;
+    }
+    h2::after {
+        background: #fff;
+    }
+}
+
+.marketing-card:hover {
+    background-color: $bright-green;
+    color: #fff;
+    .btn-marketing {
+        background-color: #fff;
+        color: $bright-green;
+    }
+    .icon-marketing {
+        background-color: #fff;
+        color: $bright-green;
+    }
+    h2::after {
+        background: #fff;
+    }
+}
+
+.telecoms-card:hover {
+    background-color: $red;
+    color: #fff;
+    .btn-telecoms {
+        background-color: #fff;
+        color: $red;
+    }
+    .icon-telecoms {
+        background-color: #fff;
+        color: $red;
+    }
+    h2::after {
+        background: #fff;
+    }
+}
+
+.web-card:hover {
+    background-color: $dusky-purple;
+    color: #fff;
+    .btn-web {
+        background-color: #fff;
+        color: $dusky-purple;
+    }
+    .icon-web {
+        background-color: #fff;
+        color: $dusky-purple;
+    }
+    h2::after {
+        background: #fff;
+    }
+}
+
+.security-card:hover {
+    background-color: $dusky-red;
+    color: #fff;
+    .btn-security {
+        background-color: #fff;
+        color: $dusky-red;
+    }
+    .icon-cyber {
+        background-color: #fff;
+        color: $dusky-red;
+    }
+    h2::after {
+        background: #fff;
+    }
+}
+
+.training-card:hover {
+    background-color: $dusky-purple;
+    color: #fff;
+    .btn-training {
+        background-color: #fff;
+        color: $dusky-purple;
+    }
+    .icon-training {
+        background-color: #fff;
+        color: $dusky-purple;
+    }
+    h2::after {
+        background: #fff;
+    }
+}

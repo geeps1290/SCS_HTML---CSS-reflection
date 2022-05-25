@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.clients-section {
+    display: none;
+    @media screen and (min-width: 765px) {
+        display: flex;
+        width: 100%;
+        height: 145px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.client-logo {
+    padding: 0 20px;
+    @media screen and (min-width: 1260px) {
+        padding: 0 40px;
+    }
+}
+
+.busseys img {
+    width: 121px;
+    @media screen and (min-width: 992px) {
+        width: 169px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 188px;
+    }
+}
+
+.crane img {
+    width: 185px;
+    @media screen and (min-width: 992px) {
+        width: 258px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 287px;
+    }
+}
+
+.beat img {
+    width: 46px;
+    @media screen and (min-width: 992px) {
+        width: 65px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 72px;
+    }
+}
+
+.northern-diver img {
+    width: 207.5px;
+    @media screen and (min-width: 992px) {
+        width: 289px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 322px;
+    }
+}
