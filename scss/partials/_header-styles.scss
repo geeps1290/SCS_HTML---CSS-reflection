@@ -70,6 +70,7 @@ header .header-container .nm-logo-container img {
         order: 2;
         width: 135px;
         height: 50px;
+        padding: 5px;
         background-color: $light-blue;
         border: $light-blue;
         align-items: center;
@@ -92,11 +93,10 @@ header .header-container .nm-logo-container img {
     color: #fff;
     line-height: 50px;
     font-size: 1.25rem;
-    margin-top: 5px;
 }
 
 #support-text {
-    font-size: 1.15rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin-left: 5px;
 }
@@ -110,8 +110,9 @@ header .header-container .nm-logo-container img {
         margin-left: 20px;
         display: flex;
         order: 3;
-        width: 135px;
+        width: 140px;
         height: 50px;
+        padding: 5px;
         background-color: #999aa2;
         border: #999aa2;
         align-items: center;
@@ -133,12 +134,10 @@ header .header-container .nm-logo-container img {
 .paperplane-icon {
     color: #fff;
     line-height: 50px;
-    font-size: 1.25rem;
-    margin-top: 5px;
-}
+    font-size: 1.25rem;}
 
 #paperplane-text {
-    font-size: 1.15rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin-left: 5px;
 }
