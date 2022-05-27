@@ -29,7 +29,11 @@
     align-items: flex-start;
     gap: 8px;
     width: 100%;
+    @media screen and (min-width: 992px) {
+        padding-right: 50px;
+    }
     @media screen and (min-width: 1260px) {
+        column-gap: 160px;
         justify-content: flex-end;
     }
 }
@@ -52,37 +56,27 @@
     }
 }
 
-.accreditation-item img {
-    width: 100%;
-}
-
 .placeholder-item {
-    width: 25.2px;
-    @media screen and (min-width: 992px) {
-        width: 65.2px;
-    }
+    width: 60px;
     @media screen and (min-width: 1260px) {
-        width: 100px;
+        display: none;
     }
 }
 
-.microsoft-item {
-    width: 140.2px;
+.microsoft {
+    width: 140px;
+    height: 85px;
     @media screen and (min-width: 992px) {
-        width: 184.2px;
+        width: 184px;
+        height: 112px;
     }
-    @media screen and (min-width: 1260px) {
-        width: 230px;
-    }
-}
-
-.microsoft-item img {
     @media screen and (min-width: 1260px) {
         width: 115px;
+        height: 70px;
     }
 }
 
-.future50-item {
+.future50, .future50-colour {
     width: 69.2px;
     @media screen and (min-width: 992px) {
         width: 113.2px;
@@ -92,13 +86,25 @@
     }
 }
 
-.future50-item img {
+.future50, .future50-colour {
     @media screen and (min-width: 1260px) {
         width: 44px;
     }
 }
 
-.QMS-item {
+.future50-colour {
+    display: none;
+}
+
+.future50-item:hover .future50 {
+    display: none;
+}
+
+.future50-item:hover .future50-colour {
+    display: inline-block;
+}
+
+.QMS, .QMS-colour {
     width: 85.2px;
     @media screen and (min-width: 992px) {
         width: 129.2px;
@@ -108,13 +114,25 @@
     }
 }
 
-.QMS-item img {
+.QMS, .QMS-colour {
     @media screen and (min-width: 1260px) {
         width: 60px;
     }
 }
 
-.NCC-item {
+.QMS-colour {
+    display: none;
+}
+
+.QMS-item:hover .QMS {
+    display: none;
+}
+
+.QMS-item:hover .QMS-colour {
+    display: inline-block;
+}
+
+.NCC, .NCC-colour {
     width: 200.2px;
     @media screen and (min-width: 992px) {
         width: 244.2px;
@@ -124,13 +142,25 @@
     }
 }
 
-.NCC-item img {
+.NCC, .NCC-colour {
     @media screen and (min-width: 1260px) {
         width: 175px;
     }
 }
 
-.investing-item, .princess-item, .skills-item {
+.NCC-colour {
+    display: none;
+}
+
+.NCC-item:hover .NCC {
+    display: none;
+}
+
+.NCC-item:hover .NCC-colour {
+    display: inline-block;
+}
+
+.investing, .investing-colour, .princess, .princess-colour, .skills, .skills-colour {
     width: 140.2px;
     @media screen and (min-width: 992px) {
         width: 195.25px;
@@ -140,20 +170,20 @@
     }
 }
 
-.investing-item {
+.investing, .investing-colour {
     @media screen and (min-width: 1260px) {
         margin-right: 50px;
     }
 }
 
-.princess-item, .skills-item {
+.princess, .princess-colour, .skills, .skills-colour {
     @media screen and (min-width: 1260px) {
         margin-left: 55px;
         margin-right: 55px;
     }
 }
 
-.PPC-item {
+.PPC, .PPC-colour {
     width: 139.41px;
     @media screen and (min-width: 992px) {
         width: 194.25px;
@@ -168,4 +198,40 @@
     @media screen and (min-width: 1260px) {
         margin-top: 10px;
     }
+}
+
+.investing-colour, .PPC-colour, .princess-colour, .skills-colour {
+    display: none;
+}
+
+.investing-item:hover .investing {
+    display: none;
+}
+
+.investing-item:hover .investing-colour {
+    display: inline-block;
+}
+
+.PPC-item:hover .PPC {
+    display: none;
+}
+
+.PPC-item:hover .PPC-colour {
+    display: inline-block;
+}
+
+.princess-item:hover .princess {
+    display: none;
+}
+
+.princess-item:hover .princess-colour {
+    display: inline-block;
+}
+
+.skills-item:hover .skills {
+    display: none;
+}
+
+.skills-item:hover .skills-colour {
+    display: inline-block;
 }

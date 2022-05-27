@@ -679,6 +679,87 @@ header .header-container .nm-logo-container img {
   color: #fff;
 }
 
+.drop-menu {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 200px;
+  z-index: 10;
+  list-style: none;
+}
+
+.drop-menu-software {
+  background-color: #526781;
+}
+
+.drop-menu-support {
+  background-color: #4183D7;
+}
+
+.drop-menu-marketing {
+  background-color: #64CD73;
+}
+
+.drop-menu-services {
+  background-color: #D64541;
+}
+
+.drop-menu-design {
+  background-color: #926FB1;
+}
+
+.drop-menu-security {
+  background-color: #E94158;
+}
+
+.drop-menu-training {
+  background-color: #926FB1;
+}
+
+.navbar-software:hover .drop-menu-software,
+.navbar-support:hover .drop-menu-support,
+.navbar-services:hover .drop-menu-services,
+.navbar-marketing:hover .drop-menu-marketing,
+.navbar-security:hover .drop-menu-security,
+.navbar-design:hover .drop-menu-design,
+.navbar-training:hover .drop-menu-training {
+  display: flex;
+}
+
+.navbar-item > ul > li > a {
+  font-size: 0.8125rem;
+}
+@media screen and (min-width: 1260px) {
+  .navbar-item > ul > li > a {
+    font-size: 1rem;
+  }
+}
+
+.drop-menu > li:not(:last-child) a:after {
+  content: "-";
+  padding-left: 20px;
+}
+
+.drop-menu > li:not(:first-child) a {
+  padding-left: 20px;
+}
+
+.drop-menu > li:last-child {
+  padding-right: 70px;
+}
+@media screen and (min-width: 1260px) {
+  .drop-menu > li:last-child {
+    padding-right: 170px;
+  }
+}
+
 .banner-container {
   display: flex;
   position: relative;
@@ -1292,6 +1373,11 @@ a.card .btn-training {
   background-color: #926FB1;
 }
 
+.news-card .btn:hover {
+  background-color: #7e57a0;
+  border-color: #735093;
+}
+
 .user {
   display: flex;
   margin-top: 30px;
@@ -1474,60 +1560,108 @@ a.card .btn-training {
   }
 }
 
-.busseys img {
+.busseys-img, .busseys-img-colour {
   width: 121px;
 }
 @media screen and (min-width: 992px) {
-  .busseys img {
+  .busseys-img, .busseys-img-colour {
     width: 169px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .busseys img {
+  .busseys-img, .busseys-img-colour {
     width: 188px;
   }
 }
 
-.crane img {
+.busseys-img-colour {
+  display: none;
+}
+
+.busseys:hover .busseys-img {
+  display: none;
+}
+
+.busseys:hover .busseys-img-colour {
+  display: inline-block;
+}
+
+.crane-img, .crane-img-colour {
   width: 185px;
 }
 @media screen and (min-width: 992px) {
-  .crane img {
+  .crane-img, .crane-img-colour {
     width: 258px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .crane img {
+  .crane-img, .crane-img-colour {
     width: 287px;
   }
 }
 
-.beat img {
+.crane-img-colour {
+  display: none;
+}
+
+.crane:hover .crane-img {
+  display: none;
+}
+
+.crane:hover .crane-img-colour {
+  display: inline-block;
+}
+
+.beat-img, .beat-img-colour {
   width: 46px;
 }
 @media screen and (min-width: 992px) {
-  .beat img {
+  .beat-img, .beat-img-colour {
     width: 65px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .beat img {
+  .beat-img, .beat-img-colour {
     width: 72px;
   }
 }
 
-.northern-diver img {
+.beat-img-colour {
+  display: none;
+}
+
+.beat:hover .beat-img {
+  display: none;
+}
+
+.beat:hover .beat-img-colour {
+  display: inline-block;
+}
+
+.northern-diver-img, .northern-diver-img-colour {
   width: 207.5px;
 }
 @media screen and (min-width: 992px) {
-  .northern-diver img {
+  .northern-diver-img, .northern-diver-img-colour {
     width: 289px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .northern-diver img {
+  .northern-diver-img, .northern-diver-img-colour {
     width: 322px;
   }
+}
+
+.northern-diver-img-colour {
+  display: none;
+}
+
+.northern-diver:hover .northern-diver-img {
+  display: none;
+}
+
+.northern-diver:hover .northern-diver-img-colour {
+  display: inline-block;
 }
 
 footer {
@@ -1766,8 +1900,14 @@ footer h3 {
   gap: 8px;
   width: 100%;
 }
+@media screen and (min-width: 992px) {
+  .accreditation-row1 {
+    padding-right: 50px;
+  }
+}
 @media screen and (min-width: 1260px) {
   .accreditation-row1 {
+    column-gap: 160px;
     justify-content: flex-end;
   }
 }
@@ -1792,141 +1932,165 @@ footer h3 {
   }
 }
 
-.accreditation-item img {
-  width: 100%;
-}
-
 .placeholder-item {
-  width: 25.2px;
-}
-@media screen and (min-width: 992px) {
-  .placeholder-item {
-    width: 65.2px;
-  }
+  width: 60px;
 }
 @media screen and (min-width: 1260px) {
   .placeholder-item {
-    width: 100px;
+    display: none;
   }
 }
 
-.microsoft-item {
-  width: 140.2px;
+.microsoft {
+  width: 140px;
+  height: 85px;
 }
 @media screen and (min-width: 992px) {
-  .microsoft-item {
-    width: 184.2px;
+  .microsoft {
+    width: 184px;
+    height: 112px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .microsoft-item {
-    width: 230px;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  .microsoft-item img {
+  .microsoft {
     width: 115px;
+    height: 70px;
   }
 }
 
-.future50-item {
+.future50, .future50-colour {
   width: 69.2px;
 }
 @media screen and (min-width: 992px) {
-  .future50-item {
+  .future50, .future50-colour {
     width: 113.2px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .future50-item {
+  .future50, .future50-colour {
     width: 175px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .future50-item img {
+  .future50, .future50-colour {
     width: 44px;
   }
 }
 
-.QMS-item {
+.future50-colour {
+  display: none;
+}
+
+.future50-item:hover .future50 {
+  display: none;
+}
+
+.future50-item:hover .future50-colour {
+  display: inline-block;
+}
+
+.QMS, .QMS-colour {
   width: 85.2px;
 }
 @media screen and (min-width: 992px) {
-  .QMS-item {
+  .QMS, .QMS-colour {
     width: 129.2px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .QMS-item {
+  .QMS, .QMS-colour {
     width: 190px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .QMS-item img {
+  .QMS, .QMS-colour {
     width: 60px;
   }
 }
 
-.NCC-item {
+.QMS-colour {
+  display: none;
+}
+
+.QMS-item:hover .QMS {
+  display: none;
+}
+
+.QMS-item:hover .QMS-colour {
+  display: inline-block;
+}
+
+.NCC, .NCC-colour {
   width: 200.2px;
 }
 @media screen and (min-width: 992px) {
-  .NCC-item {
+  .NCC, .NCC-colour {
     width: 244.2px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .NCC-item {
+  .NCC, .NCC-colour {
     width: 260px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .NCC-item img {
+  .NCC, .NCC-colour {
     width: 175px;
   }
 }
 
-.investing-item, .princess-item, .skills-item {
+.NCC-colour {
+  display: none;
+}
+
+.NCC-item:hover .NCC {
+  display: none;
+}
+
+.NCC-item:hover .NCC-colour {
+  display: inline-block;
+}
+
+.investing, .investing-colour, .princess, .princess-colour, .skills, .skills-colour {
   width: 140.2px;
 }
 @media screen and (min-width: 992px) {
-  .investing-item, .princess-item, .skills-item {
+  .investing, .investing-colour, .princess, .princess-colour, .skills, .skills-colour {
     width: 195.25px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .investing-item, .princess-item, .skills-item {
+  .investing, .investing-colour, .princess, .princess-colour, .skills, .skills-colour {
     width: 175px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .investing-item {
+  .investing, .investing-colour {
     margin-right: 50px;
   }
 }
 
 @media screen and (min-width: 1260px) {
-  .princess-item, .skills-item {
+  .princess, .princess-colour, .skills, .skills-colour {
     margin-left: 55px;
     margin-right: 55px;
   }
 }
 
-.PPC-item {
+.PPC, .PPC-colour {
   width: 139.41px;
 }
 @media screen and (min-width: 992px) {
-  .PPC-item {
+  .PPC, .PPC-colour {
     width: 194.25px;
   }
 }
 @media screen and (min-width: 1260px) {
-  .PPC-item {
+  .PPC, .PPC-colour {
     width: 174px;
     margin-left: 50px;
   }
@@ -1936,6 +2100,42 @@ footer h3 {
   .accreditation-row2 .accreditation-item {
     margin-top: 10px;
   }
+}
+
+.investing-colour, .PPC-colour, .princess-colour, .skills-colour {
+  display: none;
+}
+
+.investing-item:hover .investing {
+  display: none;
+}
+
+.investing-item:hover .investing-colour {
+  display: inline-block;
+}
+
+.PPC-item:hover .PPC {
+  display: none;
+}
+
+.PPC-item:hover .PPC-colour {
+  display: inline-block;
+}
+
+.princess-item:hover .princess {
+  display: none;
+}
+
+.princess-item:hover .princess-colour {
+  display: inline-block;
+}
+
+.skills-item:hover .skills {
+  display: none;
+}
+
+.skills-item:hover .skills-colour {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=styles.css.map */

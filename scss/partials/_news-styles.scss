@@ -140,6 +140,11 @@
     background-color: $dusky-purple;
 }
 
+.news-card .btn:hover {
+    background-color: #7e57a0;
+    border-color: #735093;
+}
+
 .user {
     display: flex;
     margin-top: 30px;

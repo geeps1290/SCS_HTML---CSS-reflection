@@ -18,7 +18,7 @@
     }
 }
 
-.busseys img {
+.busseys-img, .busseys-img-colour {
     width: 121px;
     @media screen and (min-width: 992px) {
         width: 169px;
@@ -28,7 +28,19 @@
     }
 }
 
-.crane img {
+.busseys-img-colour {
+    display: none;
+}
+
+.busseys:hover .busseys-img {
+    display: none;
+}
+.busseys:hover .busseys-img-colour {
+    display: inline-block;
+}
+
+
+.crane-img, .crane-img-colour {
     width: 185px;
     @media screen and (min-width: 992px) {
         width: 258px;
@@ -38,7 +50,18 @@
     }
 }
 
-.beat img {
+.crane-img-colour {
+    display: none;
+}
+
+.crane:hover .crane-img {
+    display: none;
+}
+.crane:hover .crane-img-colour {
+    display: inline-block;
+}
+
+.beat-img, .beat-img-colour {
     width: 46px;
     @media screen and (min-width: 992px) {
         width: 65px;
@@ -48,7 +71,18 @@
     }
 }
 
-.northern-diver img {
+.beat-img-colour {
+    display: none;
+}
+
+.beat:hover .beat-img {
+    display: none;
+}
+.beat:hover .beat-img-colour {
+    display: inline-block;
+}
+
+.northern-diver-img, .northern-diver-img-colour {
     width: 207.5px;
     @media screen and (min-width: 992px) {
         width: 289px;
@@ -56,4 +90,15 @@
     @media screen and (min-width: 1260px) {
         width: 322px;
     }
+}
+
+.northern-diver-img-colour {
+    display: none;
+}
+
+.northern-diver:hover .northern-diver-img {
+    display: none;
+}
+.northern-diver:hover .northern-diver-img-colour {
+    display: inline-block;
 }

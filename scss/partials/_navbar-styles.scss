@@ -112,3 +112,82 @@
 .navbar-software:hover span, .navbar-support:hover span, .navbar-marketing:hover span, .navbar-services:hover span, .navbar-design:hover span, .navbar-security:hover span, .navbar-training:hover span {
     color: #fff;
 }
+
+// =================== DROP MENU STYLES ================== //
+
+.drop-menu {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 200px;
+    z-index: 10;
+    list-style: none;
+}
+
+.drop-menu-software {
+    background-color: #526781;
+}
+
+.drop-menu-support {
+    background-color: $light-blue;
+}
+
+.drop-menu-marketing {
+    background-color: $bright-green;
+}
+
+.drop-menu-services {
+    background-color: $red;
+}
+
+.drop-menu-design {
+    background-color: $dusky-purple;
+}
+
+.drop-menu-security {
+    background-color: $dusky-red;
+}
+
+.drop-menu-training {
+    background-color: $dusky-purple;
+}
+
+.navbar-software:hover .drop-menu-software,
+.navbar-support:hover .drop-menu-support,
+.navbar-services:hover .drop-menu-services,
+.navbar-marketing:hover .drop-menu-marketing,
+.navbar-security:hover .drop-menu-security,
+.navbar-design:hover .drop-menu-design,
+.navbar-training:hover .drop-menu-training {
+    display: flex;
+}
+
+.navbar-item>ul>li>a{
+  font-size: .8125rem;
+  @media screen and (min-width: 1260px){
+    font-size: 1rem;
+  }
+}
+
+.drop-menu>li:not(:last-child) a:after {
+  content: "-";
+  padding-left: 20px;
+}
+
+.drop-menu>li:not(:first-child) a {
+  padding-left: 20px;
+}
+
+.drop-menu>li:last-child {
+  padding-right: 70px;
+  @media screen and (min-width: 1260px){
+    padding-right: 170px;
+  }
+}
