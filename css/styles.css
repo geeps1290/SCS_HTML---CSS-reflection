@@ -146,7 +146,7 @@ a, a:focus, a:hover {
 }
 
 img {
-  vertical-align: center;
+  vertical-align: middle;
   border: 0;
 }
 
@@ -1215,6 +1215,10 @@ a.card .btn-training {
   margin-left: 5px;
 }
 
+.news-container {
+  padding-bottom: 50px;
+}
+
 .latest {
   height: 104px;
   width: 100%;
@@ -1242,7 +1246,7 @@ a.card .btn-training {
   column-gap: 30px;
   row-gap: 30px;
   width: 100%;
-  padding: 30px 0 30px;
+  padding: 30px 0 0;
   text-decoration: none;
 }
 
@@ -1548,6 +1552,7 @@ a.card .btn-training {
     height: 145px;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.1) inset;
   }
 }
 
@@ -1662,6 +1667,96 @@ a.card .btn-training {
 
 .northern-diver:hover .northern-diver-img-colour {
   display: inline-block;
+}
+
+.client-item {
+  position: relative;
+}
+
+.description {
+  display: none;
+  position: absolute;
+  left: -200px;
+  right: -200px;
+}
+
+.description-busseys {
+  top: -170px;
+}
+
+.description-crane {
+  top: -215px;
+}
+
+.description-beat {
+  top: -173px;
+}
+
+.description-northern-diver {
+  top: -215px;
+}
+
+.box {
+  text-align: center;
+  background-color: #333645;
+  color: #fff;
+  padding: 20px;
+  font-size: 0.875rem;
+  max-width: 260px;
+  margin: 0 auto 50px;
+}
+
+.description-beat .box {
+  left: -32px;
+  right: -32px;
+}
+
+.box .arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -36px;
+}
+
+.box .arrow:after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-color: #333645 transparent transparent;
+  border-style: solid;
+  border-width: 35px 36px 0;
+}
+
+.box h3 {
+  position: relative;
+  font-size: 1.125rem;
+  color: #fff;
+  padding-bottom: 17px;
+  margin: 0 0 11px;
+  font-weight: 400;
+}
+
+.box p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+}
+
+.box h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+}
+
+.client-item:hover .description {
+  display: block;
 }
 
 footer {
