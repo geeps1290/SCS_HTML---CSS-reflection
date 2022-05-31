@@ -305,11 +305,12 @@ header .header-container .nm-logo-container img {
 }
 
 .icon-magnifying-glass {
-    width: 15%;
+    width: 5%;
     font-size: 1.6rem;
     line-height: 50px;
     color: $darker-slate-grey;
     @media screen and (min-width: 765px) {
+        width: 15%;
         background-color: #999aa2;
         border: #999aa2;
         color: #fff;
@@ -339,7 +340,9 @@ header .header-container .nm-logo-container img {
 }
 
 .search-bar-container:hover .icon-magnifying-glass {
-    color: #fff;
-    background-color: #84858f;
-    border-color: #797a85;
+    @media screen and (min-width: 765px) {
+        color: #fff;
+        background-color: #84858f;
+        border-color: #797a85;
+    }
 }

@@ -527,13 +527,14 @@ header .header-container .nm-logo-container img {
 }
 
 .icon-magnifying-glass {
-  width: 15%;
+  width: 5%;
   font-size: 1.6rem;
   line-height: 50px;
   color: #333645;
 }
 @media screen and (min-width: 765px) {
   .icon-magnifying-glass {
+    width: 15%;
     background-color: #999aa2;
     border: #999aa2;
     color: #fff;
@@ -568,10 +569,12 @@ header .header-container .nm-logo-container img {
   }
 }
 
-.search-bar-container:hover .icon-magnifying-glass {
-  color: #fff;
-  background-color: #84858f;
-  border-color: #797a85;
+@media screen and (min-width: 765px) {
+  .search-bar-container:hover .icon-magnifying-glass {
+    color: #fff;
+    background-color: #84858f;
+    border-color: #797a85;
+  }
 }
 
 .navbar-container {
@@ -1189,7 +1192,7 @@ a.card .btn-training {
 
 .about-content {
   max-width: 880px;
-  padding: 50px 30px;
+  padding: 50px 15px;
 }
 @media screen and (min-width: 1260px) {
   .about-content {
@@ -1207,6 +1210,7 @@ a.card .btn-training {
 
 .about-content p {
   line-height: 1.875rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
