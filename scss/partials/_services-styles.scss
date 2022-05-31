@@ -31,7 +31,9 @@
     text-align: center;
     width: 90%;
     max-width: 658px;
-    // height: 315px;
+    @media screen and (min-width: 1260px) {
+        min-height: 338px;
+    }
 }
 
 .first-row {
