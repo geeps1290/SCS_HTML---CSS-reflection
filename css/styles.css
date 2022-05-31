@@ -1234,6 +1234,12 @@ a.card .btn-training {
   padding: 5px 15px;
 }
 
+.about-content .btn:hover {
+  color: #333645;
+  background-color: #ebebeb;
+  border-color: #e0e0e0;
+}
+
 .about-content .btn span.icon-arrow-right2 {
   margin-left: 5px;
   margin-bottom: 3px;
@@ -1602,6 +1608,12 @@ input[type=checkbox]:checked + label > span.icon-checkmark {
 
 .newsletter-container .btn {
   background-color: #333645;
+}
+
+.newsletter-container .btn:hover {
+  color: #fff;
+  background-color: #22242e;
+  border-color: #191a22;
 }
 
 .clients-section {
