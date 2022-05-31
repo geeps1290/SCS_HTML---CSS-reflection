@@ -31,8 +31,11 @@
     text-align: center;
     width: 90%;
     max-width: 658px;
+}
+
+span.gap {
     @media screen and (min-width: 1260px) {
-        min-height: 338px;
+        display: none;
     }
 }
 

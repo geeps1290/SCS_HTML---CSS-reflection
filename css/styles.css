@@ -925,9 +925,10 @@ header .header-container .nm-logo-container img {
   width: 90%;
   max-width: 658px;
 }
+
 @media screen and (min-width: 1260px) {
-  .card {
-    min-height: 338px;
+  span.gap {
+    display: none;
   }
 }
 
