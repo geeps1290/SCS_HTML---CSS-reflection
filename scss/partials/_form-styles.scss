@@ -51,18 +51,18 @@
     }
 }
 
-.newsletter-container form label {
+.newsletter-container form .form-item label {
     display: inline-block;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-.newsletter-container form label::after {
+.newsletter-container form .form-item label::after {
     content: " *";
     color: red;
 }
 
-.newsletter-container form input {
+.newsletter-container form .form-item input {
     display: block;
     width: 100%;
     height: 47px;
@@ -83,15 +83,79 @@
     margin-bottom: 15px;
 }
 
-.unchecked-checkbox {
+/* ======= checkbox styles ======= */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label {
+    position: relative;
     height: 32px;
     width: 32px;
     border-radius: 3px;
     border: 3px solid #333645;
-    position: relative;
     float: left;
     margin-right: 20px;
 }
+
+.checkbox label::before {
+    content: "";
+    color: #fff;
+    background-color: #333645;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    border: 3px solid #333645;
+    border-radius: 3px;
+    left: -3px;
+    top: -3px;
+    transform: scale(0) rotateZ(180deg);
+}
+
+input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+
+input[type="checkbox"]:checked + label > span.icon-checkmark {
+     display: block;
+}
+
+.icon-checkmark {
+    display: none;
+    position: absolute;
+    right: 3.5px;
+    left: 3.5px;
+    top: 3.5px;
+    bottom: 3.5px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+// .checkbox {
+//     height: 32px;
+//     width: 32px;
+//     border-radius: 3px;
+//     border: 3px solid #333645;
+//     position: relative;
+//     float: left;
+//     margin-right: 20px;
+// }
+
+// span.unchecked-checkbox > input[type=checkbox] {
+//     height: 26px;
+//     // background-color: #ddd;
+//     visibility: hidden;
+// }
+
+// span.unchecked-checkbox > input[type=checkbox]:checked {
+//     height: 26px;
+//     background-color: #333645;
+// }
+
+// span.unchecked-checkbox > input[type=checkbox]:checked .icon-checkmark {
+//     display: block;
+// }
 
 .marketing-info {
     width: calc(100% - 56px);

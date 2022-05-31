@@ -91,8 +91,12 @@ header .header-container .nm-logo-container img {
 
 .mouse-icon {
     color: #fff;
-    line-height: 50px;
-    font-size: 1.25rem;
+    font-size: 1.438rem;
+    line-height: 45px;
+}
+
+.icon-mouse {
+    vertical-align: middle;
 }
 
 #support-text {
@@ -134,7 +138,12 @@ header .header-container .nm-logo-container img {
 .paperplane-icon {
     color: #fff;
     line-height: 50px;
-    font-size: 1.25rem;}
+    font-size: 1.25rem;
+}
+
+.icon-paperplane {
+    vertical-align: middle;
+}
 
 #paperplane-text {
     font-size: 1rem;

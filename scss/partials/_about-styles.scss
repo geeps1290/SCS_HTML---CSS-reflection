@@ -43,12 +43,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
     width: 180px;
     height: 47px;
     border-radius: 3px;
     line-height: 47px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     background-color: #fff;
     color: $darker-slate-grey;
@@ -57,4 +56,5 @@
 
 .about-content .btn span.icon-arrow-right2 {
     margin-left: 5px;
+    margin-bottom: 3px;
 }

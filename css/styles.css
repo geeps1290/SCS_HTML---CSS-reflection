@@ -4,8 +4,8 @@
 /* ======================== Icomoons Fonts ======================== */
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?9339im");
-  src: url("../fonts/icomoon.eot?9339im#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?9339im") format("truetype"), url("../fonts/icomoon.woff?9339im") format("woff"), url("../fonts/icomoon.svg?9339im#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?2lq1s0");
+  src: url("../fonts/icomoon.eot?2lq1s0#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2lq1s0") format("truetype"), url("../fonts/icomoon.woff?2lq1s0") format("woff"), url("../fonts/icomoon.svg?2lq1s0#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -54,6 +54,10 @@
 
 .icon-linkedin2:before {
   content: "\eaca";
+}
+
+.icon-checkmark:before {
+  content: "\e90c";
 }
 
 .icon-menu:before {
@@ -288,8 +292,12 @@ header .header-container .nm-logo-container img {
 
 .mouse-icon {
   color: #fff;
-  line-height: 50px;
-  font-size: 1.25rem;
+  font-size: 1.438rem;
+  line-height: 45px;
+}
+
+.icon-mouse {
+  vertical-align: middle;
 }
 
 #support-text {
@@ -333,6 +341,10 @@ header .header-container .nm-logo-container img {
   color: #fff;
   line-height: 50px;
   font-size: 1.25rem;
+}
+
+.icon-paperplane {
+  vertical-align: middle;
 }
 
 #paperplane-text {
@@ -909,7 +921,6 @@ header .header-container .nm-logo-container img {
   text-align: center;
   width: 90%;
   max-width: 658px;
-  height: 315px;
 }
 
 @media screen and (min-width: 990px) {
@@ -947,6 +958,10 @@ header .header-container .nm-logo-container img {
   line-height: 1.375rem;
   margin-bottom: 13px;
   font-weight: 400;
+}
+
+.break {
+  display: block;
 }
 
 a.card span.icon {
@@ -1199,12 +1214,11 @@ a.card .btn-training {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   width: 180px;
   height: 47px;
   border-radius: 3px;
   line-height: 47px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   background-color: #fff;
   color: #333645;
@@ -1213,6 +1227,7 @@ a.card .btn-training {
 
 .about-content .btn span.icon-arrow-right2 {
   margin-left: 5px;
+  margin-bottom: 3px;
 }
 
 .news-container {
@@ -1485,18 +1500,18 @@ a.card .btn-training {
   }
 }
 
-.newsletter-container form label {
+.newsletter-container form .form-item label {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.newsletter-container form label::after {
+.newsletter-container form .form-item label::after {
   content: " *";
   color: red;
 }
 
-.newsletter-container form input {
+.newsletter-container form .form-item input {
   display: block;
   width: 100%;
   height: 47px;
@@ -1517,14 +1532,52 @@ a.card .btn-training {
   margin-bottom: 15px;
 }
 
-.unchecked-checkbox {
+/* ======= checkbox styles ======= */
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox label {
+  position: relative;
   height: 32px;
   width: 32px;
   border-radius: 3px;
   border: 3px solid #333645;
-  position: relative;
   float: left;
   margin-right: 20px;
+}
+
+.checkbox label::before {
+  content: "";
+  color: #fff;
+  background-color: #333645;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  border: 3px solid #333645;
+  border-radius: 3px;
+  left: -3px;
+  top: -3px;
+  transform: scale(0) rotateZ(180deg);
+}
+
+input[type=checkbox]:checked + label::before {
+  transform: scale(1) rotateZ(0deg);
+}
+
+input[type=checkbox]:checked + label > span.icon-checkmark {
+  display: block;
+}
+
+.icon-checkmark {
+  display: none;
+  position: absolute;
+  right: 3.5px;
+  left: 3.5px;
+  top: 3.5px;
+  bottom: 3.5px;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .marketing-info {
