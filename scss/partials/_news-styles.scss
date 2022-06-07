@@ -9,27 +9,34 @@
     width: 100%;
     box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
     display: flex;
-    padding: 0 15px;
+    justify-content: center;
+    @media screen and (min-width: 992px) {
+        padding: 0 15px;
+    }
 }
 
 .latest span {
     border-bottom: solid #333645 5px;
     text-transform: uppercase;
     padding: 40px 0;
-    margin-left: 30px;
     font-size: 1.25rem;
     font-weight: 600;
     color: $lighter-slate-grey;
-    @media screen and (max-width: 346px) {
-        margin-left: 0;
-    }
 }
 
 .latest-container {
-    @media screen and (max-width: 346px) {
-        margin-left: 0;
+    width: 90%;
+    @media screen and (min-width: 768px) {
+        width: 720px;
+    }
+    @media screen and (min-width: 992px) {
+        width: 940px;
+    }
+    @media screen and (min-width: 1260px) {
+        width: 1170px;
     }
 }
+
 
 .news-cards-container {
     display: flex;

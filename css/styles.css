@@ -1343,27 +1343,39 @@ a.card .btn-training {
   width: 100%;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   display: flex;
-  padding: 0 15px;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .latest {
+    padding: 0 15px;
+  }
 }
 
 .latest span {
   border-bottom: solid #333645 5px;
   text-transform: uppercase;
   padding: 40px 0;
-  margin-left: 30px;
   font-size: 1.25rem;
   font-weight: 600;
   color: #333645;
 }
-@media screen and (max-width: 346px) {
-  .latest span {
-    margin-left: 0;
+
+.latest-container {
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .latest-container {
+    width: 720px;
   }
 }
-
-@media screen and (max-width: 346px) {
+@media screen and (min-width: 992px) {
   .latest-container {
-    margin-left: 0;
+    width: 940px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .latest-container {
+    width: 1170px;
   }
 }
 
