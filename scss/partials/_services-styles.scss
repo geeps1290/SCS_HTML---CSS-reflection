@@ -13,7 +13,7 @@
     background: #FEFEFE;
     text-decoration: none;
     box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 992px) {
         padding: 30px;
         column-gap: 20px;
     }
@@ -25,12 +25,11 @@
     background: #fff;
     border-radius: 3px;
     border: 1px solid #ccc;
-    // display: block;
     box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
     text-decoration: none;
     text-align: center;
     width: 90%;
-    max-width: 658px;
+    // max-width: 658px;
 }
 
 span.gap {
@@ -40,7 +39,10 @@ span.gap {
 }
 
 .first-row {
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 768px) {
+        width: 720px;
+    }
+    @media screen and (min-width: 992px) {
         width: 30%;
     }
     @media screen and (min-width: 1260px) {
@@ -49,11 +51,26 @@ span.gap {
 }
 
 .second-row {
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 768px) {
+        width: 345px;
+    }
+    @media screen and (min-width: 992px) {
         width: 45%;
     }
     @media screen and (min-width: 1260px) {
         width: 270px;
+    }
+}
+
+.telecoms-card, .security-card {
+    @media screen and (min-width: 992px) and (max-width: 1259px) {
+        margin-right: 10px;
+    }
+}
+
+.web-card, .training-card {
+    @media screen and (min-width: 992px) and (max-width: 1259px) {
+        margin-left: 10px;
     }
 }
 

@@ -1,17 +1,22 @@
 @use '../abstracts' as *;
 
+/* ======== Header styles ======== */
+
 .header-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
     gap: 10px 0;
     width: 100%;
     height: 175px;
     box-sizing: border-box;
     padding: 20px 10px;
-    @media screen and (min-width: 765px) {
+}
+@media screen and (min-width: 768px) {
+    .header-container {
         justify-content: center;
-        height: 100px;
+        height: 110px;
     }
 }
 
@@ -21,60 +26,70 @@
 }
 
 .search-bar-container {
-    height: 50px;
+    height: 56px;
 }
 
 /* === Netmatters Logo ===*/
-
 .nm-logo-container {
-    width: 70%;
+    width: 40%;
+    align-items: center;
     order: 1;
     display: flex;
     justify-content: flex-start;
     flex: 1 1 auto;
-    @media screen and (min-width: 765px) {
-        width: 400px;
+    @media screen and (min-width: 347px) {
+        width: 45%;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .nm-logo-container {
+        width: 345px;
         flex: 0 1 auto;
+        margin-right: 40px;
     }
-    @media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 992px) {
+    .nm-logo-container {
         width: 450px;
     }
 }
 
 header .header-container .nm-logo-container img {
-    width: 90%;
-    max-width: 360px;
+    width: 100%;
+    max-width: 402px;
     display: block;
     float: left;
 }
 
-.nm-logo-container img {
-    @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
+    .nm-logo-container img {
         width: 370px;
     }
 }
 
-.nm-logo {
-    @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
+    .nm-logo {
         width: 100%;
     }
 }
 
 /* ======= Support =======*/
-
 .support-container {
     display: none;
-    @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 992px) {
+    .support-container {
         box-sizing: border-box;
         display: flex;
         order: 2;
-        width: 135px;
-        height: 50px;
-        padding: 5px;
-        background-color: $light-blue;
-        border: $light-blue;
+        width: 142px;
+        height: 56px;
+        padding: 5px 15px;
+        background-color: #4183D7;
+        border: #4183D7;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         line-height: 45px;
         border-radius: 3px;
     }
@@ -90,39 +105,37 @@ header .header-container .nm-logo-container img {
 }
 
 .mouse-icon {
+    display: flex;
+    align-items: center;
     color: #fff;
     font-size: 1.438rem;
-    line-height: 45px;
-}
-
-.icon-mouse {
-    vertical-align: middle;
 }
 
 #support-text {
-    font-size: 1rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
     margin-left: 5px;
 }
 
 /* ======= Contact =======*/
-
 .contact-container {
     display: none;
-    @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 992px) {
+    .contact-container {
         box-sizing: border-box;
         margin-left: 20px;
         display: flex;
         order: 3;
-        width: 140px;
-        height: 50px;
-        padding: 5px;
+        width: 150px;
+        height: 56px;
+        padding: 5px 15px;
         background-color: #999aa2;
         border: #999aa2;
         align-items: center;
-        justify-content: center;
-        line-height: 45px;
+        justify-content: flex-start;
         border-radius: 3px;
+        line-height: 45px;
     }
 }
 
@@ -136,8 +149,9 @@ header .header-container .nm-logo-container img {
 }
 
 .paperplane-icon {
+    display: flex;
+    align-items: center;
     color: #fff;
-    line-height: 50px;
     font-size: 1.25rem;
 }
 
@@ -146,18 +160,22 @@ header .header-container .nm-logo-container img {
 }
 
 #paperplane-text {
-    font-size: 1rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
     margin-left: 5px;
 }
 
 .phone-icon-container {
-    width: 10%;
+    width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 2rem;
     order: 2;
-    flex: 0 1 33px;
-    @media screen and (min-width: 765px) {
+}
+@media screen and (min-width: 768px) {
+    .phone-icon-container {
         display: none;
     }
 }
@@ -171,90 +189,40 @@ header .header-container .nm-logo-container img {
     text-decoration: underline;
 }
 
-/* ===== Burger menu =====*/
-
-.burger-menu-container {
-    width: 20%;
-    order: 3;
-    flex: 0 1 55px;
-    margin-left: 10px;
-    @media screen and (min-width: 410px){
-        margin-left: 20px;   
-    }
-    @media screen and (min-width: 990px) {
-        order: 5;
-    }
-}
-
-.burger-button {
-    float: right;
-    box-sizing: border-box;
-    width: 55px;
-    height: 50px;
-    background-color: $darker-slate-grey;
-    border-color: $darker-slate-grey;
-    color: #fff;
-    overflow-x: hidden;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 3px;
-    margin: auto;
-    @media screen and (min-width: 990px) {
-        width: 58px;
-    }
-}
-
-.icon-menu {
-    font-size: 1.5rem;
-    @media screen and (min-width: 990px) {
-        font-size: 1.6rem;
-    }
-}
-
-.burger-title {
-    display: block;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-}
-
-.burger-button:hover {
-    background-color: #22242e;
-    border-color: #191a22;
-}
-
-.burger-button:hover .burger-title, .burger-button:hover .icon-menu {
-    color: #fff;
-}
-
 /* ====== Search bar =====*/
-
 .search-bar-container {
     order: 4;
     display: flex;
     width: 100%;
-    background-color: rgba(0,0,0,.1);
-    outline: 1px solid hsla(0,0%,100%,.2);
-    border: 2px solid rgba(0,0,0,.1);
+    height: 47px;
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     text-align: center;
     vertical-align: center;
-    line-height: 50px;
-    align-items: stretch;
     justify-content: space-between;
-    @media screen and (min-width: 765px) {
+}
+@media screen and (min-width: 768px) {
+    .search-bar-container {
         order: 2;
         width: 220px;
+        height: 56px;
         background-color: transparent;
         outline: none;
         border: none;
         border-radius: 0px;
     }
-    @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 992px) {
+    .search-bar-container {
         order: 4;
-        width: 55px;
+        width: 63px;
         margin-left: 20px;
     }
-    @media screen and (min-width: 1260px) {
+}
+@media screen and (min-width: 1260px) {
+    .search-bar-container {
         order: 3;
         width: 300px;
     }
@@ -269,80 +237,179 @@ header .header-container .nm-logo-container img {
 
 .search-form {
     height: 100%;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .search-form input {
-    width: 85%;
+    height: 100%;
+    width: 100%;
+    padding: 5px 15px;
     background: transparent;
     border: none;
     font-size: 0.9rem;
-    @media screen and (min-width: 765px) {
+    line-height: 1.42857143;
+}
+@media screen and (min-width: 768px) {
+    .search-form input {
         order: 2;
         width: 165px;
         height: 100%;
-        outline: 1px solid hsla(0,0%,100%,.2);
-        border-top: 2px solid rgba(0,0,0,.1);
-        border-left: 2px solid rgba(0,0,0,.1);
-        border-bottom: 2px solid rgba(0,0,0,.1);
+        outline: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        border-left: 2px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         border-radius: 3px 0 0 3px;
         padding-left: 10px;
     }
-    @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 992px) {
+    .search-form input {
         display: none;
         width: 0;
     }
-    @media screen and (min-width: 1260px) {
+}
+@media screen and (min-width: 1260px) {
+    .search-form input {
         display: inline-block;
         width: 245px;
         height: 100%;
-        outline: 1px solid hsla(0,0%,100%,.2);
-        border-top: 2px solid rgba(0,0,0,.1);
-        border-left: 2px solid rgba(0,0,0,.1);
-        border-bottom: 2px solid rgba(0,0,0,.1);
+        outline: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        border-left: 2px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
         border-radius: 3px 0 0 3px;
         padding-left: 10px;
     }
 }
 
 .icon-magnifying-glass {
-    width: 5%;
+    line-height: 45px;
+    color: #333645;
     font-size: 1.6rem;
-    line-height: 50px;
-    color: $darker-slate-grey;
-    @media screen and (min-width: 765px) {
-        width: 15%;
+    margin-right: 5px;
+}
+@media screen and (min-width: 768px) {
+    .icon-magnifying-glass {
+        font-size: 1.8rem;
         background-color: #999aa2;
         border: #999aa2;
         color: #fff;
-        width: 55px;
+        width: 63px;
         padding: 5px;
-        vertical-align: center;
-        line-height: 35px;
         border-radius: 0 3px 3px 0;
+        margin-right: 0px;
     }
-    @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 992px) {
+    .icon-magnifying-glass {
         border-radius: 3px;
     }
-    @media screen and (min-width: 1260px) {
+}
+@media screen and (min-width: 1260px) {
+    .icon-magnifying-glass {
         border-radius: 0 3px 3px 0;
     }
 }
 
-.icon-magnifying-glass::before {
-    @media screen and (min-width: 765px) {
-        position: absolute;
-        bottom: 5px;
-        right: 13px;
-    }
-    @media screen and (min-width: 990px) {
-        right: 14px;
-    }
-}
 
-.search-bar-container:hover .icon-magnifying-glass {
-    @media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
+    .search-bar-container:hover .icon-magnifying-glass {
         color: #fff;
         background-color: #84858f;
         border-color: #797a85;
     }
+}
+
+/* ===== Burger menu =====*/
+.burger-menu-container {
+    width: 64px;
+    order: 3;
+    flex: 0 1 55px;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 410px) {
+    .burger-menu-container {
+        margin-left: 20px;
+        width: 84px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .burger-menu-container {
+        order: 5;
+    }
+}
+
+.burger-button {
+    box-sizing: border-box;
+    width: 63.031px;
+    height: 56px;
+    background-color: #333645;
+    border: none;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 3px;
+    line-height: 46px;
+    font-size: 1.125rem;
+}
+
+@media screen and (min-width: 992px) {
+    .icon-menu {
+        font-size: 1.6rem;
+    }
+}
+
+.burger-title {
+    display: block;
+    text-transform: uppercase;
+    font-size: .75rem;
+    line-height: 1;
+    position: relative;
+    margin-bottom: -12px;
+    margin-top: 12px;
+}
+
+.burger-button:hover {
+    background-color: #22242e;
+    border-color: #191a22;
+}
+
+.burger-button:hover .burger-title, .burger-button:hover .icon-menu {
+    color: #fff;
+}
+
+.burger-box {
+    display: block;
+    position: relative;
+    top: -3px;
+}
+
+.burger-inner {
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+}
+
+.burger-inner::before {
+content: "";
+    display: block;
+    background-color: #fff;
+    width: 33px;
+    height: 3px;
+    position: absolute;
+    top: -8px;
+}
+
+.burger-inner::after {
+content: "";
+    display: block;
+    background-color: #fff;
+    width: 33px;
+    height: 3px;
+    position: absolute;
+    bottom: -8px;
 }
