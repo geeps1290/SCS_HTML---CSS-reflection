@@ -478,6 +478,19 @@ header .header-container .nm-logo-container img {
     padding-left: 10px;
   }
 }
+@media screen and (max-width: 767px) {
+  #search-bar:focus {
+    outline: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #search-bar:focus {
+    border-color: #5bc0de;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
+  }
+}
+
 .icon-magnifying-glass {
   line-height: 45px;
   color: #333645;
