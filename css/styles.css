@@ -1868,20 +1868,68 @@ body > div.newsletter-container > div > form > div.form-item > input:focus {
   right: -200px;
 }
 
-.description-busseys {
-  top: -170px;
+@media screen and (min-width: 768px) {
+  .description-busseys {
+    top: -185px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .description-busseys {
+    top: -176px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .description-busseys {
+    top: -171px;
+  }
 }
 
-.description-crane {
-  top: -215px;
+@media screen and (min-width: 768px) {
+  .description-crane {
+    top: -228px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .description-crane {
+    top: -220px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .description-crane {
+    top: -216px;
+  }
 }
 
-.description-beat {
-  top: -173px;
+@media screen and (min-width: 768px) {
+  .description-beat {
+    top: -185px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .description-beat {
+    top: -175px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .description-beat {
+    top: -173px;
+  }
 }
 
-.description-northern-diver {
-  top: -215px;
+@media screen and (min-width: 768px) {
+  .description-northern-diver {
+    top: -228px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .description-northern-diver {
+    top: -220px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .description-northern-diver {
+    top: -215px;
+  }
 }
 
 .box {
