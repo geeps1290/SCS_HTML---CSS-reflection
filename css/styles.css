@@ -247,13 +247,29 @@ li {
 @media screen and (min-width: 992px) {
   .nm-logo-container {
     width: 450px;
+    margin-right: 0;
   }
 }
 header .header-container .nm-logo-container img {
   width: 100%;
-  max-width: 402px;
   display: block;
   float: left;
+  max-width: 402px;
+}
+@media screen and (min-width: 768px) {
+  header .header-container .nm-logo-container img {
+    max-width: 345px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .header-container .nm-logo-container img {
+    max-width: 374.156px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  header .header-container .nm-logo-container img {
+    max-width: 370px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -452,11 +468,11 @@ header .header-container .nm-logo-container img {
     width: 165px;
     height: 100%;
     outline: 1px solid rgba(255, 255, 255, 0.2);
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
-    border-left: 2px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 3px 0 0 3px;
-    padding-left: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    padding: 5px 15px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 }
 @media screen and (min-width: 992px) {
@@ -471,11 +487,11 @@ header .header-container .nm-logo-container img {
     width: 245px;
     height: 100%;
     outline: 1px solid rgba(255, 255, 255, 0.2);
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
-    border-left: 2px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 3px 0 0 3px;
-    padding-left: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    padding: 5px 15px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 }
 @media screen and (max-width: 767px) {
