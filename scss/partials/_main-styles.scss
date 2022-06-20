@@ -78,3 +78,14 @@ li {
         width: 1200px;
     }
 }
+
+.page-body {
+    position: relative;
+    @media screen and (min-width: 992px) {
+        top: 110px;
+    }
+    @media screen and (min-width: 992px) {
+        height: calc(100vh - 210px);   
+        top: 210px;     
+    }
+}

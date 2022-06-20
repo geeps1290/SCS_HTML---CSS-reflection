@@ -1,18 +1,24 @@
 @use '../abstracts' as *;
 
+.services-outer-container {
+    display: block;
+    // position: relative;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+    background: #FEFEFE;
+}
+
 .services-container {
     height: auto;
     padding: 30px 0 30px;
     display: flex;
+    // position: relative;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
     column-gap: 30px;
     row-gap: 30px;
-    background: #FEFEFE;
     text-decoration: none;
-    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
     @media screen and (min-width: 992px) {
         padding: 30px;
         column-gap: 20px;
