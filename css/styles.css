@@ -2658,26 +2658,4 @@ footer > div.footer-bottom > div > div.copyright > ul > li > a:hover {
   display: inline-block;
 }
 
-.scroll-header {
-  width: 100%;
-  z-index: 999;
-  transition: all 300ms ease-in-out;
-}
-
-.fixed-header {
-  position: fixed;
-}
-
-.absolute-header {
-  position: absolute;
-}
-
-.scroll-down .scroll-header {
-  transform: translate3d(0, -100%, 0);
-}
-
-.scroll-up .scroll-header {
-  position: fixed;
-}
-
 /*# sourceMappingURL=styles.css.map */
