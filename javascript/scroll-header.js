@@ -2,8 +2,6 @@
 const body = document.body;
 let lastScroll = 0;
 
-// while 
-
 window.addEventListener('scroll', () => {
 
     // console.log(window.pageYOffset)

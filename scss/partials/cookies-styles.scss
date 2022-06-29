@@ -1,0 +1,140 @@
+@use '../abstracts' as *;
+
+#cookies {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+}
+
+.cookies-outercontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookies-container {
+    background-color: white;
+    color: #666;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    @media screen and (min-width: 768px) {
+        width: 600px;        
+    }
+}
+
+.cookies-subcontainer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.cookies {
+    min-height: 70px;
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-wrap: wrap;
+}
+
+.cookies-title {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.42857143px;
+}
+
+.cookies-title h1 {
+    line-height: 1.42857143;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.625rem;
+    margin: 0;
+    color: #333645;
+}
+
+.cookies-text {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px;
+}
+
+.cookies-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content:space-around;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;     
+    }
+}
+
+.cookies-text a {
+    color: #333645;
+    text-decoration: none;
+}
+
+.cookies-text a:hover, .cookies a:focus {
+    color: #121419;
+    text-decoration: underline;
+}
+
+.cookies-text p {
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+}
+
+#cookies-btn {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: 264px;        
+    }
+}
+
+.cookies-btn-settings {
+    color: #fff;
+    background-color: #999aa2;
+    border-color: #999aa2;
+}
+
+.cookies-btn-settings:hover, .cookies-btn-settings:focus {
+    color: #fff;
+    background-color: #84858f;
+    border-color: #797a85;
+}
+
+.cookies-btn-accept {
+    color: #fff;
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+
+.cookies-btn-accept:hover, .cookies-btn-accept:focus {
+    color: #fff;
+    background-color: #7e57a0;
+    border-color: #735093;
+}
+
+// @media (max-width: 1600px) {
+//     .cookies-ontainer {
+//         width: 100%;
+//     }
+// }
+
+// @media (max-width: 1024px) {
+//     .cookies {
+//         padding: 10px 0;
+//     }
+// }

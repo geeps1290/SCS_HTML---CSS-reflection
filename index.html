@@ -10,7 +10,26 @@
     <title>Netmatters | Full Service Digital Agency | Cambridgeshire &amp; Norfolk | Netmatters</title>
 </head>
 <body>
-
+    <div id="cookies">
+        <div class="cookies-outercontainer">
+            <div class="cookies-container">
+                <div class="cookies-subcontainer">
+                    <div class="cookies">
+                        <div class="cookies-title">
+                            <h1>Cookies Policy</h1>
+                        </div>
+                        <div class="cookies-text">
+                            <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on <a href="#">"Privacy Policy"</a> otherwise click <a href="#">"Accept Cookies"</a> to enter.</p>
+                        </div>
+                        <div class="cookies-btn-container">
+                            <a id="cookies-btn" class="cookies-btn-settings btn">Change settings</a>
+                            <a id="cookies-btn" class="cookies-btn-accept btn">Accept cookies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="scroll-header absolute-header">
         <header>
             <div class="header-container"> <!-- START header div -->
@@ -575,8 +594,22 @@
         </div>
     </div>
 </div> <!---end page body-->
+    <script src="javascript/cookies.js"></script>
     <script src="javascript/jquery.js"></script>
     <script src="javascript/banner-carousel.js"></script>
     <script src="javascript/scroll-header.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sticksy/dist/sticksy.min.js"></script>
+    <script>
+        var stickyEl = new Sticksy('.js-sticky-widget');
+
+        var stickyEl = new Sticksy('.js-sticky-widget', {
+            listen: true, // Listen for the DOM changes in the container
+        })
+
+        stickyEl.onStateChanged = function (state) {
+            if (state === 'fixed') stickyEl.nodeRef.classList.add('widget--sticky')
+            else stickyEl.nodeRef.classList.remove('widget--sticky')
+        }
+    </script> -->
 </body>
 </html>

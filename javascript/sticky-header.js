@@ -1,8 +1,6 @@
 // WRITE IN jQuery
 // when page scroll is <= "window.pageYOffset = 210", header is "position: absolute"
 
-
-
     if ($(document).scrollTop() <= 210) {
         $('.sticky-header').addClass('absolute-header');
         $('.sticky-header').removeClass('fixed-header');
