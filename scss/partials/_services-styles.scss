@@ -16,13 +16,8 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
+    gap: 30px;
     text-decoration: none;
-    @media screen and (min-width: 992px) {
-        padding: 30px;
-        column-gap: 20px;
-    }
 }
 
 .card {
@@ -38,9 +33,16 @@
     // max-width: 658px;
 }
 
-span.gap {
+span.gap_first-row {
     @media screen and (min-width: 1260px) {
         display: none;
+    }
+}
+
+span.gap_second-row {
+    display: none;
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        display: block;
     }
 }
 

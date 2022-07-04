@@ -205,6 +205,7 @@ header .header-container .nm-logo-container img {
 }
 
 /* ====== Search bar =====*/
+
 .search-bar-container {
     order: 4;
     display: flex;
@@ -248,6 +249,15 @@ header .header-container .nm-logo-container img {
     position: relative;
     vertical-align: bottom;
     margin: 0;
+}
+
+.search-bar-container > span > input[type=submit] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
 }
 
 .search-form {
@@ -341,7 +351,7 @@ header .header-container .nm-logo-container img {
 
 
 @media screen and (min-width: 768px) {
-    .search-bar-container:hover .icon-magnifying-glass {
+    .search-bar-container .icon-magnifying-glass:hover {
         color: #fff;
         background-color: #84858f;
         border-color: #797a85;

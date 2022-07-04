@@ -24,7 +24,6 @@
 }
 
 .navbar-item {
-    padding-top: 10px;
     width: 132px;
     border-right: 0.5px solid rgba(225, 225, 225, .1);
     border-left: 1px solid rgba(0 ,0, 0, .25);
@@ -44,6 +43,10 @@
 }
 
 .navbar-item a {
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
     text-transform: uppercase;
     color: #fff;
     font-size: 1.125rem;
@@ -133,11 +136,21 @@
     padding: 0px;
     margin: 0px;
     position: absolute;
-    left: -1px;
-    right: -1px;
+    left: 0px;
+    right: 0px;
     top: 209px;
     z-index: 10;
     list-style: none;
+    overscroll-behavior-x: none;
+}
+
+.drop-menu-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 924px;
+    @media screen and (min-width: 1260px){
+        width: 1155px;
+    }
 }
 
 .drop-menu-software {
@@ -178,25 +191,18 @@
     display: flex;
 }
 
-.navbar-item>ul>li>a{
+.drop-menu>div>li>a{
   font-size: .8125rem;
   @media screen and (min-width: 1260px){
     font-size: 1rem;
   }
 }
 
-.drop-menu>li:not(:last-child) a:after {
+.drop-menu>div>li:not(:last-child) a:after {
   content: "-";
   padding-left: 20px;
 }
 
-.drop-menu>li:not(:first-child) a {
+.drop-menu>div>li:not(:first-child) a {
   padding-left: 20px;
-}
-
-.drop-menu>li:last-child {
-  padding-right: 70px;
-  @media screen and (min-width: 1260px){
-    padding-right: 170px;
-  }
 }

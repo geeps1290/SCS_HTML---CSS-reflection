@@ -154,7 +154,7 @@ input[type="checkbox"]:checked + label > span.icon-checkmark {
     border-color: #191a22;
 }
 
-body > div.newsletter-container > div > form > div.form-item > input:focus {
+.newsletter-container > div > form > div.form-item > input:focus {
     border-color: #5bc0de;
     outline: 0;
     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(91 192 222 / 60%);

@@ -463,6 +463,15 @@ header .header-container .nm-logo-container img {
   margin: 0;
 }
 
+.search-bar-container > span > input[type=submit] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
 .search-form {
   height: 100%;
 }
@@ -557,7 +566,7 @@ header .header-container .nm-logo-container img {
   }
 }
 @media screen and (min-width: 768px) {
-  .search-bar-container:hover .icon-magnifying-glass {
+  .search-bar-container .icon-magnifying-glass:hover {
     color: #fff;
     background-color: #84858f;
     border-color: #797a85;
@@ -676,7 +685,6 @@ header .header-container .nm-logo-container img {
 }
 
 .navbar-item {
-  padding-top: 10px;
   width: 132px;
   border-right: 0.5px solid rgba(225, 225, 225, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.25);
@@ -698,6 +706,10 @@ header .header-container .nm-logo-container img {
 }
 
 .navbar-item a {
+  display: block;
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.125rem;
@@ -783,11 +795,23 @@ header .header-container .nm-logo-container img {
   padding: 0px;
   margin: 0px;
   position: absolute;
-  left: -1px;
-  right: -1px;
+  left: 0px;
+  right: 0px;
   top: 209px;
   z-index: 10;
   list-style: none;
+  overscroll-behavior-x: none;
+}
+
+.drop-menu-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 924px;
+}
+@media screen and (min-width: 1260px) {
+  .drop-menu-container {
+    width: 1155px;
+  }
 }
 
 .drop-menu-software {
@@ -828,31 +852,22 @@ header .header-container .nm-logo-container img {
   display: flex;
 }
 
-.navbar-item > ul > li > a {
+.drop-menu > div > li > a {
   font-size: 0.8125rem;
 }
 @media screen and (min-width: 1260px) {
-  .navbar-item > ul > li > a {
+  .drop-menu > div > li > a {
     font-size: 1rem;
   }
 }
 
-.drop-menu > li:not(:last-child) a:after {
+.drop-menu > div > li:not(:last-child) a:after {
   content: "-";
   padding-left: 20px;
 }
 
-.drop-menu > li:not(:first-child) a {
+.drop-menu > div > li:not(:first-child) a {
   padding-left: 20px;
-}
-
-.drop-menu > li:last-child {
-  padding-right: 70px;
-}
-@media screen and (min-width: 1260px) {
-  .drop-menu > li:last-child {
-    padding-right: 170px;
-  }
 }
 
 .carousel__container {
@@ -926,16 +941,20 @@ header .header-container .nm-logo-container img {
   align-items: center;
   align-content: center;
 }
-
 @media screen and (min-width: 992px) {
   .banner-contents {
-    max-width: 1200px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 80px;
     top: 20%;
+    width: 924px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .banner-contents {
+    width: 1155px;
+  }
+}
+
 .banner-text h1 {
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -1109,15 +1128,8 @@ header .header-container .nm-logo-container img {
   justify-content: center;
   align-items: center;
   align-content: center;
-  column-gap: 30px;
-  row-gap: 30px;
+  gap: 30px;
   text-decoration: none;
-}
-@media screen and (min-width: 992px) {
-  .services-container {
-    padding: 30px;
-    column-gap: 20px;
-  }
 }
 
 .card {
@@ -1133,8 +1145,17 @@ header .header-container .nm-logo-container img {
 }
 
 @media screen and (min-width: 1260px) {
-  span.gap {
+  span.gap_first-row {
     display: none;
+  }
+}
+
+span.gap_second-row {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  span.gap_second-row {
+    display: block;
   }
 }
 
@@ -1681,6 +1702,7 @@ a.card .btn-training {
   display: inline;
   height: 47px;
   max-width: 47px;
+  border-radius: 50%;
 }
 
 .user-text {
@@ -1875,7 +1897,7 @@ input[type=checkbox]:checked + label > span.icon-checkmark {
   border-color: #191a22;
 }
 
-body > div.newsletter-container > div > form > div.form-item > input:focus {
+.newsletter-container > div > form > div.form-item > input:focus {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08), 0 0 8px rgba(91, 192, 222, 0.6);
